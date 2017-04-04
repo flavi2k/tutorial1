@@ -20,7 +20,7 @@ public class NavigatingUser {
     CurrentPage currentPage;
     CategoryNavigationBar categoryNavigationBar;
 
-    @Step
+    @Step("Mark is on the home page")
     public void isOnTheHomePage() {
         ebayHomePage.open();
     }

@@ -25,12 +25,6 @@ public class WhenBrowsingProductCategories {
     @Managed(driver="chrome")
     WebDriver browser;
 
-   /* @Before
-    public void before(){
-        System.setProperty("webdriver.chrome.driver", "D://KIT//chromedriver.exe");
-        browser = new ChromeDriver();
-    }*/
-
     @Test
     public void shouldBeAbleToNavigateToTheMotorsCategory() {
         // Given
