@@ -11,6 +11,8 @@ import org.junit.runner.RunWith;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import java.util.Date;
+
 import static net.serenitybdd.tutorials.model.Category.Motors;
 
 /**
@@ -27,6 +29,9 @@ public class WhenBrowsingProductCategories {
 
     @Test
     public void shouldBeAbleToNavigateToTheMotorsCategory() {
+
+        Long startMs =System.currentTimeMillis();
+
         // Given
         mark.isOnTheHomePage();
 
@@ -35,5 +40,10 @@ public class WhenBrowsingProductCategories {
 
         // Then
         mark.shouldSeePageTitleContaining("New & used cars");
+
+        Long endMs =System.currentTimeMillis();
+        double durationTime = (endMs.doubleValue()-startMs.doubleValue())/1000;
+        System.out.println("Execution time (seconds): ");
+        System.out.println(durationTime);
     }
 }
