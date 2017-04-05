@@ -46,4 +46,9 @@ public class WhenBrowsingProductCategories {
         System.out.println("Execution time (seconds): ");
         System.out.println(durationTime);
     }
+
+    @Test
+    public void userIsOnTheHomePage(){
+        mark.isOnTheHomePage();
+    }
 }
